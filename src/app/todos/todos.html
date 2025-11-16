@@ -1,0 +1,11 @@
+<p>todos list!</p>
+
+@if (!todoItems().length) {
+<p>Loading...</p>
+}
+
+<ul class="todos">
+  @for (todo of todoItems(); track $index) {
+  <app-todo-item [todo]="todo" (todoToggled)="updateTodoItem($event)"/>
+  }
+</ul>
