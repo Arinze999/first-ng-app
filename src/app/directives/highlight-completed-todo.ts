@@ -11,8 +11,12 @@ export class HighlightCompletedTodo {
   stylesEffect = effect(() => {
     if (this.isCompleted()) {
       this.el.nativeElement.style.textDecoration = 'line-through';
+      this.el.nativeElement.style.background = 'green';
+      this.el.nativeElement.style.opacity = '40%';
     } else {
       this.el.nativeElement.style.textDecoration = 'none';
+      this.el.nativeElement.style.background = 'none';
+      this.el.nativeElement.style.opacity = '100%';
     }
   });
 }
